@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <title>Fitness Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="script.js">
+    <style>
+
+/* Hero Section */
+.hero {
+  
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.hero-grid {
+  max-width: auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+.hero h1 {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: #48c902e8;
+  text-align: right;
+  text-transform: uppercase;
+  animation: fadeInDown 1s ease-out;
+}
+
+.tagline h2 {
+  margin-top: 90px;
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  line-height: 0.5;
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.tagline h2:nth-child(1) { animation-delay: 0.2s; }
+.tagline h2:nth-child(2) { animation-delay: 0.4s; }
+.tagline h2:nth-child(3) { animation-delay: 0.6s; }
+
+.cta-button {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 130px; /* Adjust this value to move the button to the right */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  background: #48c902e8;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  color: #000;
+    background-color: #48c902e8;
+    box-shadow: 0px 0px 15px 3px #48c902e8;
+    border: 2px solid #48c902e8;
+    transition: 0.3s ease-in-out;
+    
+}
+
+
+
+
+.scroll-arrow {
+ 
+  width: 20px;
+  height: 20px;
+  border-right: 4px solid #48c902;
+  border-bottom: 4px solid #48c902;
+  transform: rotate(45deg);
+  margin: 1rem auto;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .tagline h2 {
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+  
+  .cta-button {
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .tagline h2 {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+<body class="home-page">
+    
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.php" >About Us</a></li>
+            <li><a href="memberships01.php">Memberships</a></li>
+            <li><a href="activities_02.php">Activities</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Signin</a></li>
+            <li><a href="blogs.php">Blogs</a></li>
+        </ul>
+    </nav>
+
+    <!-- HTML Structure -->
+<section class="hero">
+  <div class="hero-grid">
+    <h1><b>FITZONE</b></h1>
+    <div class="tagline">
+      <h2>Small Steps</h2>
+      <h2>Equal Big</h2>
+      <h2>Changes</h2>
+    </div>
+    <a href="register.php" class="cta-button">
+      Join Us Today
+    </a>
+  </div>
+  <div class="scroll-down">
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+    <section class="benefits">
+     <br> <h3 class="text-5xl font-bold text-white text-center tracking-wider">Benifits Of Regular Exercise</h3><br>
+      <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+    </div><br><br>        <div class="benefit-grid">
+            <div class="benefit-item">
+                
+             <h3 class="text-4xl font-bold">Improved Physical Health</h3>
+             <br>  <p>Regular exercise can lead to enhanced cardiovascular health, stronger muscles and bones, improved flexibility, and increased endurance. It also reduces the risk of chronic diseases such as heart disease, diabetes, and certain types of cancer.</p>
+            </div>
+            <div class="benefit-item">
+               
+              <h3 class="text-4xl font-bold">Enhanced Mental Health</h3>
+              <br>  <p>Exercise releases endorphins, often referred to as the 'feel-good' hormones, which can elevate mood and reduce feelings of stress, anxiety, and depression. It can also improve sleep quality and help manage conditions such as insomnia.</p>
+            </div>
+            <div class="benefit-item">
+                
+              <h3 class="text-4xl font-bold">Increased Energy Levels</h3>
+              <br> <p>Regular physical activity improves blood circulation and oxygen delivery to the body, resulting in increased energy levels and reduced fatigue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+    
+    <section class="py-20 min-h-screen flex items-center">
+        <div class=" mx-auto px-4 xl:px-8 2xl:px-16">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl xl:text-5xl font-bold text-white mb-4 tracking-wider">
+                    Our Unique Approach
+                </h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+    
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 rounded-lg  md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 max-w-[2000px] mx-auto">
+                <!-- Video 1 -->
+                <div class="relative overflow-hidden border-2 border-gray-600 hover:shadow-green-500/20 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 group">
+                    <video 
+                        class="w-full h-[300px] xl:h-[400px] 2xl:h-[500px] object-cover"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                    >
+                        <source src="gym1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-75 group-hover:opacity-40 transition-opacity duration-300"></div>
+                </div>
+    
+                <!-- Video 2 -->
+                <div class="relative overflow-hidden border-2 border-gray-600 hover:shadow-green-500/20 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 group">
+                    <video 
+                        class="w-full h-[300px] xl:h-[400px] 2xl:h-[500px] object-cover"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                    >
+                        <source src="gym2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0  bg-gradient-to-t from-black/50 to-transparent opacity-75 group-hover:opacity-40 transition-opacity duration-300"></div>
+                </div>
+    
+                <!-- Video 3 -->
+                <div class="relative overflow-hidden border-2 border-gray-600 hover:shadow-green-500/20 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 group">
+                    <video 
+                        class="w-full h-[300px] xl:h-[400px] 2xl:h-[500px] object-cover"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                    >
+                        <source src="gym3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 border-2 border-gray-600 hover:shadow-green-500/20 bg-gradient-to-t from-black/50 to-transparent opacity-75 group-hover:opacity-40 transition-opacity duration-300"></div>
+                </div>
+    
+                <!-- Video 4 -->
+                <div class="relative overflow-hidden border-2 border-gray-600 hover:shadow-green-500/20 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 group">
+                    <video 
+                        class="w-full h-[300px] xl:h-[400px] 2xl:h-[500px] object-cover"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                    >
+                        <source src="gym4 (2).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-75 group-hover:opacity-40 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </body>
+
+
+<section class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-5xl font-bold text-white text-center tracking-wider">Calculate Your BMI </h2><br>
+  <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+</div><br><br>
+    <div class="max-w-8xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Side - BMI Information -->
+            <div class="w-full ">
+                <div class="h-full bg-black/50 backdrop-blur-lg rounded-3xl border border-gray-700 shadow-2xl overflow-hidden">
+                    <div class="p-8 md:p-12">
+                        <!-- Header -->
+                        <div class="flex items-center justify-center mb-8">
+                            <h3 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
+                                What Is BMI?
+                            </h3>
+                        </div>
+
+                        <!-- Main content -->
+                        <div class="space-y-8">
+                            <!-- Description -->
+                            <p class="text-gray-300 text-2sm leading-relaxed">
+                                BMI, or Body Mass Index, is a numerical measure commonly used to assess whether an individual's weight is proportionate to their height. It provides a quick and simple way to categorize weight status and identify potential health risks associated with weight.
+                            </p>
+
+                            <!-- Categories Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <!-- Underweight Card -->
+                                <div class="bg-blue-500/10 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 transform hover:scale-105 transition-transform duration-300">
+                                    <h4 class="text-xl font-semibold text-blue-400 mb-2">Underweight</h4>
+                                    <p class="text-gray-300">BMI less than 18.5</p>
+                                </div>
+
+                                <!-- Normal Weight Card -->
+                                <div class="bg-green-500/10 backdrop-blur-sm p-6 rounded-xl border border-green-500/20 transform hover:scale-105 transition-transform duration-300">
+                                    <h4 class="text-xl font-semibold text-green-400 mb-2">Normal Weight</h4>
+                                    <p class="text-gray-300">BMI 18.5 - 24.9</p>
+                                </div>
+
+                                <!-- Overweight Card -->
+                                <div class="bg-yellow-500/10 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20 transform hover:scale-105 transition-transform duration-300">
+                                    <h4 class="text-xl font-semibold text-yellow-400 mb-2">Overweight</h4>
+                                    <p class="text-gray-300">BMI 25 - 29.9</p>
+                                </div>
+
+                                <!-- Obese Card -->
+                                <div class="bg-red-500/10 backdrop-blur-sm p-6 rounded-xl border border-red-500/20 transform hover:scale-105 transition-transform duration-300">
+                                    <h4 class="text-xl font-semibold text-red-400 mb-2">Obese</h4>
+                                    <p class="text-gray-300">BMI 30 or greater</p>
+                                </div>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - BMI Calculator -->
+            <div class="w-full lg:w-1/2 h-49">
+                <div class="max-w-md mx-auto h-full space-y-8 bg-black/50  border border-gray-800 backdrop-blur-lg p-8 rounded-2xl shadow-lg">
+                    <!-- Header -->
+                    <div class="text-center">
+                        <h1 class="text-4xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-teal-500 mb-8">BMI Calculator</h1>
+                    </div>
+
+                    <form id="bmiForm" class="space-y-6">
+                        <!-- Unit Selector -->
+                        <div class="flex justify-center space-x-4 p-1 rounded-lg w-fit mx-auto">
+                            <button type="button" 
+                                class="unit-btn active px-6 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none bg-gradient-to-r from-green-500 to-teal-500 text-white"
+                                data-unit="metric">
+                                Metric
+                            </button>
+                            <button type="button" 
+                                class="unit-btn px-6 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none text-white hover:bg-gradient-to-r from-green-500 to-teal-500"
+                                data-unit="imperial">
+                                Imperial
+                            </button>
+                        </div>
+
+                        <!-- Weight Input -->
+                        <div class="space-y-2">
+                            <label for="weight" class="block text-sm font-medium  text-white">
+                                Weight
+                            </label>
+                            <div class="relative rounded-md shadow-sm">
+                                <input type="number" 
+                                    id="weight"
+                                    step="0.1"
+                                    required
+                                    class="border border-gray-600 block w-full pl-4 pr-12 py-3 sm:text-sm bg-white/10 text-white rounded-lg"
+                                    placeholder="Enter weight">
+                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                    <span class="text-white sm:text-sm" id="weightUnit">kg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Height Input -->
+                        <div class="space-y-2">
+                            <label for="height" class="block text-sm font-medium text-white">
+                                Height
+                            </label>
+                            <div class="relative rounded-md shadow-sm">
+                                <input type="number" 
+                                    id="height"
+                                    step="0.01"
+                                    required
+                                    class="border border-gray-600 block w-full pl-4 pr-12 py-3 bg-white/10 text-white sm:text-sm rounded-lg"
+                                    placeholder="Enter height">
+                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                    <span class="text-white sm:text-sm" id="heightUnit">m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Calculate Button -->
+                       <br> <button type="submit " 
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-300 ">
+                            Calculate BMI
+                        </button>
+
+                        <!-- Results Section -->
+                        <div id="result" class="hidden space-y-4 pt-6">
+                            <div class="text-center">
+                                <div class="bmi-value text-4xl font-bold text-green-300"></div>
+                                <div class="bmi-category text-lg font-medium text-white mt-2"></div>
+                            </div>
+                            
+                            <!-- BMI Scale -->
+                            <div class="scale relative h-4 bg-gradient-to-r from-blue-500 via-green-500 to-red-500 rounded-full mt-6">
+                                <div class="scale-marker absolute w-4 h-4 bg-white border-2 border-gray-800 rounded-full -mt-1 transform -translate-x-1/2"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-white">
+                                <span>Underweight</span>
+                                <span>Normal</span>
+                                <span>Overweight</span>
+                                <span>Obese</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('bmiForm');
+    const unitBtns = document.querySelectorAll('.unit-btn');
+    const weightUnit = document.getElementById('weightUnit');
+    const heightUnit = document.getElementById('heightUnit');
+    const result = document.getElementById('result');
+    let currentUnit = 'metric';
+
+    // Unit toggle handlers
+    unitBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            unitBtns.forEach(b => {
+                b.classList.remove('active', 'bg-gradient-to-r', 'from-green-500', 'to-teal-500');
+                b.classList.add('hover:bg-gradient-to-r', 'hover:from-green-500', 'hover:to-teal-500');
+            });
+            this.classList.add('active', 'bg-gradient-to-r', 'from-green-500', 'to-teal-500');
+            this.classList.remove('hover:bg-gradient-to-r', 'hover:from-green-500', 'hover:to-teal-500');
+            
+            currentUnit = this.dataset.unit;
+            if (currentUnit === 'metric') {
+                weightUnit.textContent = 'kg';
+                heightUnit.textContent = 'm';
+            } else {
+                weightUnit.textContent = 'lbs';
+                heightUnit.textContent = 'in';
+            }
+        });
+    });
+
+    // Form submission handler
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value);
+        let bmi;
+
+        if (currentUnit === 'metric') {
+            bmi = weight / (height * height);
+        } else {
+            bmi = (weight / (height * height)) * 703;
+        }
+
+        const bmiValue = bmi.toFixed(1);
+        let category;
+        let markerPosition;
+
+        if (bmi < 18.5) {
+            category = 'Underweight';
+            markerPosition = (bmi / 40) * 100;
+        } else if (bmi < 25) {
+            category = 'Normal weight';
+            markerPosition = (bmi / 40) * 100;
+        } else if (bmi < 30) {
+            category = 'Overweight';
+            markerPosition = (bmi / 40) * 100;
+        } else {
+            category = 'Obese';
+            markerPosition = Math.min((bmi / 40) * 100, 100);
+        }
+
+        // Update UI
+        result.classList.remove('hidden');
+        result.querySelector('.bmi-value').textContent = bmiValue;
+        result.querySelector('.bmi-category').textContent = category;
+        result.querySelector('.scale-marker').style.left = `${markerPosition}%`;
+    });
+});
+</script>
+
+</body>
+</html>
+          
+       
+            <footer class="footer">
+              <div class="footer-content">
+                <div class="footer-brand">
+                  <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold text-white mb-4 tracking-wider">FITZONE <span class="highlight">FITNESS CENTER</span></h2>
+                  <p>YOUR PARTNER IN FITNESS</p>
+                  <p>
+                    Our premier destination for achieving your fitness goals. Whether you're a beginner or a seasoned athlete, we offer state-of-the-art equipment, personalized training programs, and a supportive community to help you stay motivated and healthy.
+                  </p>
+                  <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                  </div>
+                </div>
+                
+                <div class="footer-links">
+                  <div class="link-section">
+                    <h3><b>Site Map</b></h3>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="blogs.php">News & Blogs</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="gallery.php">Gallery</a></li>
+                    </ul>
+                  </div>
+                  <div class="link-section">
+                    <h3><b>Other Services</b></h3>
+                    <ul>
+                      <li><a href="memberships01.php">Memberships</a></li>
+                      <li><a href="activities_02.php"> Activities</a></li>
+                    
+                    </ul>
+                  </div>
+                  <div class="link-section">
+                    <h3><b>Helpful Links</b></h3>
+                    <ul>
+                      <li><a href="contact.html">FAQs</a></li>
+                      <li><a href="contact.html">Support</a></li>
+                    </ul>
+                  </div>
+                  <div class="link-section contact-section">
+                    <h3><b>Contact Us</b></h3>
+                    <p><i class="fas fa-envelope"></i> fitzone@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +94 112 695 331</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 42 1/1 Maitland Crescent, Kurunegala</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+              
+   <style>
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+ 
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+ 
+  background-color: #000000cb;
+  color: #ffffff;
+  padding: 40px 20px;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative; 
+  left: 0px;
+  right: 0px 
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-brand h2 {
+  font-size: 2em;
+}
+
+.footer-brand .highlight {
+  color: #48c902bd;
+}
+
+.footer-brand p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.footer-links {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.link-section {
+  margin: 0 20px;
+  min-width: 150px;
+}
+
+.link-section h3 {
+  margin-bottom: 15px;
+}
+
+.link-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.link-section ul li {
+  margin-bottom: 10px;
+}
+
+.link-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-section ul li a:hover {
+  color: #58ff33;
+}
+
+.contact-section p {
+  margin-bottom: 10px;
+}
+
+.contact-section i {
+  margin-right: 5px;
+}
+
+
+    
+   </style>  
+            
+</body>
+</html>
